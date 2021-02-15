@@ -3605,7 +3605,7 @@ again:;
 
               // from subPreQueues, filter out any subtitle blocks that we'll see later on in the file
               // (prevents the occasional case of having a subtitle displayed twice)
-              while (qe = subPreQueues[i].head)
+              while ((qe = subPreQueues[i].head))
                   if (qe->Position < fp)
                       QPut(&tmpQ, QGet(&subPreQueues[i]));
                   else
